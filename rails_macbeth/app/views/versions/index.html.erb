@@ -1,0 +1,14 @@
+<% if Version.all.count > 0 %>
+  <h3>Which version are you looking for?</h3>
+  <br />
+  <% Version.all.each do |version| %>
+    <h4><%= "Version #{version.id}:" %></h4>
+    <% version.key_chars.each do |name, count| %>
+      <%= "#{name}: #{count} lines" %><br />
+    <% end %>
+    <%= link_to "See More", version_path(version) %>
+  <% end %>
+<% else %>
+  <h3>No versions yet!</h3>
+  <%= link_to "Add Version", new_version_path %>
+<% end %>

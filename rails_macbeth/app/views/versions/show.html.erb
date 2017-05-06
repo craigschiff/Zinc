@@ -1,0 +1,18 @@
+<h5><%= "Version #{@version.id}" %></h5>
+
+<div>
+  <%= bar_chart @character_lines, height: "600px" %>
+</div>
+
+<table>
+  <tr>
+    <th>Character</th>
+    <th>Line Count</th>
+  </tr>
+  <% @character_lines.each do |name, count| %>
+    <tr>
+      <td><%= name %></td>
+      <td><%= count %></td>
+    </tr>
+  <% end %>
+</table>

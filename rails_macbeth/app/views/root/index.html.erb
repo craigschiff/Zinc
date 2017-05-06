@@ -1,0 +1,10 @@
+<h3>Welcome to the best Macbeth Line Counter on the internet!!</h3>
+
+<br /><br />
+<label>What are you looking for?</label>
+<br />
+<%= link_to "All Versions", versions_path %><br />
+<%= link_to "New Version", new_version_path %><br />
+<% if Version.all.count > 0 %>
+  <%= link_to "Latest Version", version_path(Version.all.count) %>
+<% end %>

@@ -1,0 +1,8 @@
+<h3>Give us an XML to analyze!!</h3>
+
+<br /><br />
+<label>Please enter link below:</label>
+<%= form_tag(versions_path, method: "post") do %>
+  <%= text_field_tag(:url) %>
+  <%= submit_tag("Submit") %>
+<% end %>
